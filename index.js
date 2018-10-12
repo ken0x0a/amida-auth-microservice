@@ -11,16 +11,17 @@ import passGenerator from './config/password-generator';
 Promise = require('bluebird'); // eslint-disable-line no-global-assign
 
 function startServer() {
-  // module.parent check is required to support mocha watch
-    if (!module.parent) {
-    // listen on port config.port
-        app.listen(config.port, () => {
-            logger.info({
-                service: 'auth-service',
-                message: `server started on port ${config.port} (${config.env})`,
-            });
-        });
-    }
+  console.log('starting server')
+  // // module.parent check is required to support mocha watch
+  //   if (!module.parent) {
+  //   // listen on port config.port
+  //       app.listen(config.port, () => {
+  //           logger.info({
+  //               service: 'auth-service',
+  //               message: `server started on port ${config.port} (${config.env})`,
+  //           });
+  //       });
+  //   }
 }
 
 db.sequelize
